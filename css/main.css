@@ -2,6 +2,7 @@
 
 body, html {
     background: #000033;
+    font-size: 100%;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -13,20 +14,46 @@ body, html {
 /*** Main header ***/
 #page-header {
     background: #00001a;
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
     position: fixed;
     height: 10%;
     width: 100%;
     top: 0;
     z-index: 10;
+
+    display: flex;
+    justify-content: space-around;
 }
 
-#page-header h1 {
-    float: left;
+#page-header h1{
     margin: 0;
+    padding-left: 25px;
+    padding-top: 15px;
+    flex-grow: 4;
+}
+
+#page-header h1 a{
+    text-decoration: none;
 }
 
 #page-header nav {
-    float: right;
+    padding-top: 15px;
+    flex-grow: 1;
+
+    display: flex;
+}
+
+#page-header nav a{
+    font-size: 1.5em;
+    text-align: center;
+    text-decoration: none;
+    
+    flex-grow: 1;
+}
+
+#page-header nav a:hover {
+    background-color: #00004d;
 }
 
 /*** Main Content ***/
@@ -50,18 +77,24 @@ main {
 
 #shipyard-nav > a {
     background: #000033;
-    display: block;
+    color: #0000DD;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.2em;
     text-align: center;
-    padding-top: 15px;
     text-decoration: none;
+    
+    display: block;
+    padding-top: 15px;
 
     flex-grow: 1;
 
     transition: transform .2s;
+    transition: color .3s;
 }
 
 #shipyard-nav > a:hover{
     background: #00004d;
+    color: #fff;
     transform: translateX(-30px);
 }
 
@@ -88,17 +121,24 @@ main {
     padding-bottom: 25%;
 }
 
+.ship header h2 {
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+}
+
 .ship p{
+    color: #fff;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 1.2em;
     text-align: justify;
     width: 50%;
     margin: 50px auto;
     padding-left: 75px;
     float: left;
-}
-
-.ship header h2 {
-    text-align: center;
-    margin: 0;
 }
 
 .ship figure {
@@ -116,4 +156,3 @@ main {
     display: block;
     clear: both;
 }
-
