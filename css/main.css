@@ -55,6 +55,10 @@ body, html {
 #page-header nav a:hover {
     background-color: #00004d;
 }
+/* Indicador da página atual */
+.current {
+    background-color: #00006d
+}
 
 /*** Main Content ***/
 main {
