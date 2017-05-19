@@ -1,0 +1,119 @@
+@charset "UTF-8";
+
+body, html {
+    background: #000033;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+/*** Main header ***/
+#page-header {
+    background: #00001a;
+    position: fixed;
+    height: 10%;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+
+#page-header h1 {
+    float: left;
+    margin: 0;
+}
+
+#page-header nav {
+    float: right;
+}
+
+/*** Main Content ***/
+main {
+    position: relative;
+    top: 10%;
+}
+
+/*** Shipyard Navigation ***/
+#shipyard-nav {
+    background: #000033;
+    position: fixed;
+    height: 90%;
+    width: 20%;
+    left: 80%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#shipyard-nav > a {
+    background: #000033;
+    display: block;
+    text-align: center;
+    padding-top: 15px;
+    text-decoration: none;
+
+    flex-grow: 1;
+
+    transition: transform .2s;
+}
+
+#shipyard-nav > a:hover{
+    background: #00004d;
+    transform: translateX(-30px);
+}
+
+/*** Shipyard ***/
+#shipyard {
+    background: #CCC;
+    position: relative;
+    width: 78%;
+    scroll-behavior: none;
+}
+
+/*** Individual ships ***/
+.ship {
+    background: #00004d;
+    margin: 0 auto;
+    padding: 15% 70px 8% 50px;
+}
+
+/*
+    Impede o ultimo navio de ficar
+    na parte de baixo da tela
+*/
+.ship:last-of-type {
+    padding-bottom: 25%;
+}
+
+.ship p{
+    text-align: justify;
+    width: 50%;
+    margin: 50px auto;
+    padding-left: 75px;
+    float: left;
+}
+
+.ship header h2 {
+    text-align: center;
+    margin: 0;
+}
+
+.ship figure {
+    float: right;
+}
+
+.ship figure img {
+    border: 5px solid #ddd;
+    border-radius: 90px;
+    width: 300px;
+}
+
+.ship::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
