@@ -7,7 +7,7 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow: hidden;   /*Desabilita scrolling*/
     position: relative;
 }
 
@@ -19,7 +19,6 @@ body, html {
     position: fixed;
     height: 10%;
     width: 100%;
-    top: 0;
     z-index: 10;
 
     display: flex;
@@ -30,6 +29,7 @@ body, html {
     margin: 0;
     padding-left: 25px;
     padding-top: 15px;
+
     flex-grow: 4;
 }
 
@@ -39,6 +39,7 @@ body, html {
 
 #page-header nav {
     padding-top: 15px;
+    
     flex-grow: 1;
 
     display: flex;
@@ -63,7 +64,8 @@ body, html {
 /*** Main Content ***/
 main {
     position: relative;
-    top: 10%;
+    top: 10%;           /* Posiciona o conteudo principal 
+                           abaixo do menu */
 }
 
 /*** Shipyard Navigation ***/
@@ -118,7 +120,7 @@ main {
 }
 
 /*
-    Impede o ultimo navio de ficar
+    Impede a ultima nave de ficar
     na parte de baixo da tela
 */
 .ship:last-of-type {
@@ -155,6 +157,9 @@ main {
     width: 300px;
 }
 
+/* Insere dinamicamente um elemento 
+   após cada nave para limpar os floats
+*/
 .ship::after{
     content: "";
     display: block;
